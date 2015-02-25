@@ -1,4 +1,5 @@
-var config = require('./lib/config');
+var config = require('./lib/config'),
+  _ = require('lodash');
 
 module.exports = {
   basePath: '',
@@ -8,7 +9,9 @@ module.exports = {
   frameworks: ['jasmine'],
 
   // list of files / patterns to load in the browser
-  files: config.filesets.testSource,
+  files: _.filter(config.filesets.testSource, function (path) {
+    return _.endsWith(path, '.js');
+  }),
 
 
   // list of files to exclude

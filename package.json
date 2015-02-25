@@ -1,6 +1,6 @@
 {
   "name": "ng-useless",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "publishConfig": {
     "registry": "http://nexusnpm.dev-charter.net:8081/nexus/content/repositories/charter-npm/"
   },
